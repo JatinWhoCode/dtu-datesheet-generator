@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<style>
+    @media print{
+        #main *:not(#main-content):not(#main-content *){
+            /* visibility: hidden; */
+            display: none;
+        } 
+         /* #main-content{
+          position: absolute;
+          /* top: 0; */
+          /* left: 0;  */
+         /* } */ 
+    }
+</style>
+
+<body style="margin-left: 0px; margin-right: 0px;">
+    <div id="cursor"></div>
+
+    <div id="main">
+        <div class="container" >
+
+            <div id="box"></div>
+            <div id="mid_box" class="text">
+               <p> DTU Exam DateSheet Generator  </p>    
+                <input type="text" id="newRoll" placeholder="Enter Roll No (eg. 2K21/CO/262)">
+                <button id="addRollButton">Generate</button>
+            <br><br>
+            </div>
+            <div id="box2" class="c1"></div>
+          </div>
+          <br><br>
+     <div  class="html-content" id="main-content">
+
+        <p id="p2"> DateSheet for B.Tech Odd End Semester Examination 2023-24</p>
+        <p id="p1">  </p>
+        <table id="myTable">
+            <tr>
+                <th>Date</th>
+                <th>Subject Code</th>
+                <th>Subject Name</th>
+                <th>Timings</th>
+
+            </tr>
+        </table>
+        <br>
+         <center>Generated using <a href="https://bit.ly/DTUexam">DTU Exam DateSheet Generator         </a></center>
+
+     </div>
+        
+     <!-- <button id="btn99">print as PDF</button> -->
+     <button id="print">Print</button>
+
+    
+    <br><br>
+        <div class="faq-content">
+            <div class="faq-question">
+              <input id="q1" type="checkbox" class="panel">
+              <div class="plus">+</div>
+              <label for="q1" class="panel-title">Add Additional Subjects (Optional)</label>
+              <div class="panel-content">
+                  <div id="add_col">
+                      <h4>Add Additional Subjects (Optional)</h4>
+                      <label for="newDate">Date:</label>
+                      <input type="date" id="newDate"><br>
+                      <label for="newCode">Subject Code:</label>
+                      <input type="text" id="newCode"><br>
+                      <label for="newSubject">Subject Name:</label>
+                      <input type="text" id="newSubject"><br>
+                      <button id="addRowButton">Add Row</button>
+                  </div>
+              </div>
+            </div>
+            
+        
+
+            <div class="faq-question">
+                <input id="q3" type="checkbox" class="panel">
+                <div class="plus">+</div>
+                <label for="q3" class="panel-title">Report Bug</label>
+                <div class="panel-content">
+                    <h4> Contact : 9588710698 </h4>
+                    <h4> Mail : <a href="mailto:yjatin615@gmail.com" >yjatin615@gmail.com</a> </h4>
+                </div>
+              </div>
+              <img src="bg.png" alt="Your Image" class="image">
+
+    </div>
+   
+
+    <script src="script.js"></script>
+    <script src="names.js"></script>
+    <script src="student.js"></script>
+    <script src="dates.js"></script>
+    <script src="timings.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="path/to/html2pdf.js"></script>
+<script>
+    const printBtn=document.getElementById('print')
+    printBtn.addEventListener('click', function(){
+        print();
+    })
+</script>
+</body>
+</html>
